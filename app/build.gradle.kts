@@ -1,6 +1,10 @@
+group = "com.example"
+version = "1.0.0"
+
 plugins {
     application
     id("org.openjfx.javafxplugin") version "0.1.0"
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 repositories {
@@ -32,4 +36,12 @@ tasks.named<Test>("test") {
     useJUnitPlatform()
 }
 
-version = "1.0.0"
+tasks.withType<Jar> {
+    manifest {
+        attributes(
+            "Main-Class" to "com.example.AsteroidsApplication"
+        )
+    }
+}
+
+
