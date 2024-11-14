@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("org.openjfx.javafxplugin") version "0.1.0"
 }
 
 repositories {
@@ -22,9 +23,6 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // This dependency is used by the application.
-    implementation(libs.guava)
-    implementation("org.openjfx:javafx-controls:21")
-    implementation("org.openjfx:javafx-fxml:21")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -34,9 +32,13 @@ java {
     }
 }
 
+javafx {
+    version = "21"  // Use the appropriate JavaFX version that matches your JDK
+    modules = listOf("javafx.controls", "javafx.fxml")  // Use listOf() to define modules in Kotlin
+}
+
 application {
-    // Define the main class for the application.
-    mainClass = "com.example.AsteroidsApplication"
+    mainClass.set("com.example.AsteroidsApplication")  // Make sure this matches your package structure
 }
 
 tasks.named<Test>("test") {
