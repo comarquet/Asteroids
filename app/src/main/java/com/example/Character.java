@@ -3,20 +3,19 @@ package com.example;
 import javafx.geometry.Point2D;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Shape;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 
 public abstract class Character {
 
     private Polygon character;
-    protected Point2D movement;
+    protected Vector2D movement;
 
 
     public Character(Polygon polygon, int x, int y) {
         this.character = polygon;
         this.character.setTranslateX(x);
         this.character.setTranslateY(y);
-
-        this.movement = new Point2D(0, 0);
-
+        this.movement = new Vector2D(0, 0);
     }
 
     //rotates object to the left by 5 degrees
@@ -37,14 +36,10 @@ public abstract class Character {
     //function describes the direction, acceleration and the movement. Movement variable is used to define direction.
     public void accelerate() {
 
-        //Based on the current rotation sinus and cosinus functions direct movement on XY axis
-        double changeX = Math.cos(Math.toRadians(this.character.getRotate()));
-        double changeY = Math.sin(Math.toRadians(this.character.getRotate()));
-
-        changeX *= 0.005;
-        changeY *= 0.005;
-
-        this.movement = this.movement.add(changeX, changeY);
+        // Create a vector in the direction of the character's rotation
+        double angleInRadians = Math.toRadians(this.character.getRotate());
+        Vector2D direction = new Vector2D(Math.cos(angleInRadians), Math.sin(angleInRadians)).scalarMultiply(0.005);
+        this.movement = this.movement.add(direction);
     }
 
     //function moves the ship according to its direction

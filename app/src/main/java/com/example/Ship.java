@@ -10,11 +10,6 @@ public class Ship extends Character {
 
     //the speed of ship must be slowly reduced when acceleration button is not pushed
     public void reduceSpeed() {
-
-        double reductionX = this.movement.getX() * - 0.02;
-        double reductionY = this.movement.getY() * - 0.02;
-
-        this.movement = this.movement.add(reductionX, reductionY);
-
+        this.movement = this.movement.scalarMultiply(0.98); // Reduces speed by 2%
     }
 }

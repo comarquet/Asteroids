@@ -37,8 +37,8 @@ application {
     mainClass.set("com.example.AsteroidsApplication")
 }
 
-// It is necessary to create a JAR file instead of using modules
-// structure because others old dependencies don't support modules
+// It is necessary to create a JAR file instead of using modules structure
+// because others old dependencies (Apache Commons Math) don't support modules
 tasks.named<Test>("test") {
     useJUnitPlatform()
 }

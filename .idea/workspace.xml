@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15480bfb-0447-4bf2-94e4-d0c49262070c" name="Changes" comment="Changes typo" />
+    <list default="true" id="15480bfb-0447-4bf2-94e4-d0c49262070c" name="Changes" comment="Changes typo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Ship.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,7 +150,7 @@
       <workItem from="1731655031363" duration="12418000" />
       <workItem from="1731680898249" duration="4562000" />
       <workItem from="1731688021151" duration="335000" />
-      <workItem from="1731696149464" duration="12121000" />
+      <workItem from="1731696149464" duration="12964000" />
     </task>
     <task id="LOCAL-00001" summary="Fixes some problems">
       <option name="closed" value="true" />
