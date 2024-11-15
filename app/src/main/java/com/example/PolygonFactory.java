@@ -1,34 +1,32 @@
 package com.example;
 
-import java.util.Random;
+import org.apache.commons.math3.random.RandomDataGenerator;
 import javafx.scene.shape.Polygon;
 
 public class PolygonFactory {
 
     public Polygon createPolygon() {
+        // Create a RandomDataGenerator object
+        RandomDataGenerator generator = new RandomDataGenerator();
 
-        //Random numbers generating object
-        Random randomer = new Random();
+        // Generate five random angles between center point of XY axis and pentagon corners
+        int angle1 = generator.nextInt(21, 50);
+        int angle2 = generator.nextInt(92, 121);
+        int angle3 = generator.nextInt(165, 194);
+        int angle4 = generator.nextInt(237, 266);
+        int angle5 = generator.nextInt(309, 338);
 
+        // Generate a random size adjustment
+        int size = generator.nextInt(0, 14);
 
-        //Five random angles between center point of XY axis and pentagon corners will be picked
-        int angle1 = randomer.nextInt(30) + 21;
-        int angle2 = randomer.nextInt(30) + 92;
-        int angle3 = randomer.nextInt(30) + 165;
-        int angle4 = randomer.nextInt(30) + 237;
-        int angle5 = randomer.nextInt(30) + 309;
+        // Generate distances for each point (not too big, not too small)
+        int distance1 = generator.nextInt(15, 19) + size;
+        int distance2 = generator.nextInt(15, 19) + size;
+        int distance3 = generator.nextInt(15, 19) + size;
+        int distance4 = generator.nextInt(15, 19) + size;
+        int distance5 = generator.nextInt(15, 19) + size;
 
-
-
-        //next random point of a certain distance(not too big, not too small) from center of axis will be picked
-        int size = randomer.nextInt(15);
-        int distance1 = randomer.nextInt(5) + 15 + size;
-        int distance2 = randomer.nextInt(5) + 15 + size;
-        int distance3 = randomer.nextInt(5) + 15 + size;
-        int distance4 = randomer.nextInt(5) + 15 + size;
-        int distance5 = randomer.nextInt(5) + 15 + size;
-
-        //using trigonometric equations to determine X and Y coordinates of each point.
+        // Calculate X and Y coordinates of each point using trigonometric functions
         double x1 = Math.cos(Math.toRadians(angle1)) * distance1;
         double y1 = Math.sin(Math.toRadians(angle1)) * distance1;
 
@@ -44,7 +42,8 @@ public class PolygonFactory {
         double x5 = Math.cos(Math.toRadians(angle5)) * distance5;
         double y5 = Math.sin(Math.toRadians(angle5)) * distance5;
 
-        return (new Polygon(x1, y1, x2, y2, x3, y3, x4, y4, x5, y5));
+        // Return the generated polygon
+        return new Polygon(x1, y1, x2, y2, x3, y3, x4, y4, x5, y5);
     }
 
 }
