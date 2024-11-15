@@ -13,6 +13,7 @@ repositories {
 dependencies {
     testImplementation(libs.junit.jupiter)
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    implementation("com.badlogicgames.gdx:gdx-box2d:1.13.0")
 }
 
 java {
