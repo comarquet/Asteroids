@@ -1,7 +1,11 @@
 package com.example;
 
 import javafx.scene.shape.Polygon;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Ship extends Character {
 
     public Ship(int x, int y) {
