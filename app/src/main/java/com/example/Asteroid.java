@@ -3,26 +3,33 @@ package com.example;
 import java.util.Random;
 
 public class Asteroid extends Character {
-    private double rotationalMovement;
 
+    private double rotation;
+
+    //randomly shaped Asteroid is created using PolygonFactory class
     public Asteroid(int x, int y) {
         super(new PolygonFactory().createPolygon(), x, y);
 
-        Random rnd = new Random();
+        //random numbers generator to add randomness
+        Random randomer = new Random();
 
-        super.getCharacter().setRotate(rnd.nextInt(360));
+        //Asteroid is turned into random direction
+        this.returnCharacter().setRotate(randomer.nextInt(360));
 
-        int accelerationAmount = 1 + rnd.nextInt(1);
-        for (int i = 0; i < accelerationAmount; i++) {
-            accelerate();
+        //random  slight rotation to the movement of Asteroid
+        this.rotation = 0.5 - randomer.nextDouble();
+
+        //random speed of each asteroid is defined by random number of using "accelerate" function
+        int acceleration = randomer.nextInt(7) + 1;
+        for (int i = 0; i < acceleration; i++) {
+            this.accelerate();
         }
-
-        this.rotationalMovement = 0.5 - rnd.nextDouble();
     }
 
+    //each move slight rotation takes place too
     @Override
     public void move() {
         super.move();
-        super.getCharacter().setRotate(super.getCharacter().getRotate() + rotationalMovement);
+        this.getCharacter().setRotate(this.getCharacter().getRotate() + this.rotation);
     }
 }
