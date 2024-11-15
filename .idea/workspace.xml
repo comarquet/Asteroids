@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15480bfb-0447-4bf2-94e4-d0c49262070c" name="Changes" comment="Fixes java environment + add modules">
+    <list default="true" id="15480bfb-0447-4bf2-94e4-d0c49262070c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/AsteroidsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/AsteroidsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Projectile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +46,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "comarquet"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/comarquet/Asteroids.git",
+    "accountId": "ad15aead-3ab9-493a-9df7-440f7f620f07"
+  }
+}]]></component>
   <component name="KotlinScriptingSettings">
     <option name="suppressDefinitionsCheck" value="true" />
   </component>
@@ -66,7 +76,7 @@
     "Gradle.Lecture 4:app [:app:com.example.Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "fix/bugs",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -186,6 +196,6 @@
     <MESSAGE value="It works" />
     <MESSAGE value="Modifies metadata" />
     <MESSAGE value="Fixes java environment + add modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes java environment + add modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
