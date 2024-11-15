@@ -11,29 +11,46 @@ repositories {
 }
 
 dependencies {
-    testImplementation(libs.junit.jupiter)
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.0")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    implementation("com.badlogicgames.gdx:gdx-box2d:1.13.0")
+    implementation("org.apache.commons:commons-math3:3.6.1")
+    implementation("org.openjfx:javafx-controls:21:win")
+    implementation("org.openjfx:javafx-controls:21:linux")
+    implementation("org.openjfx:javafx-controls:21:mac")
+    implementation("org.openjfx:javafx-fxml:21:win")
+    implementation("org.openjfx:javafx-fxml:21:linux")
+    implementation("org.openjfx:javafx-fxml:21:mac")
 }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
-    }
-}
-
-// Plugin to manage the graphical display
 javafx {
     version = "21"
     modules = listOf("javafx.controls", "javafx.fxml")
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
 application {
-    mainClass = "com.example.AsteroidsApplication"
-    mainModule = "Asteroids.app.main"
+    mainClass.set("com.example.AsteroidsApplication")
 }
 
 tasks.named<Test>("test") {
     useJUnitPlatform()
+}
+
+tasks.jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes["Main-Class"] = "com.example.Launcher"
+    }
+    from({
+        configurations.runtimeClasspath.get().flatMap {
+            if (it.isDirectory) listOf(it) else zipTree(it).files
+        }
+    })
 }
 
