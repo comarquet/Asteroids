@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 import javafx.scene.input.KeyCode;
 import javafx.animation.AnimationTimer;
 import javafx.stage.Stage;
+import org.apache.commons.math3.random.RandomDataGenerator;
 
 public class AsteroidsApplication extends Application {
 
@@ -35,7 +36,7 @@ public class AsteroidsApplication extends Application {
         layout.getChildren().add(score);
 
         //creating the object that gives random values
-        Random randomer = new Random();
+        RandomDataGenerator randomer = new RandomDataGenerator();
 
         //creating ship
         Ship ship = new Ship((WIDTH/2), (HEIGHT/2));
@@ -46,8 +47,8 @@ public class AsteroidsApplication extends Application {
         List<Asteroid> asteroids = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
-            int x = randomer.nextInt(WIDTH);
-            int y = randomer.nextInt(HEIGHT);
+            int x = randomer.nextInt(0, WIDTH - 1);
+            int y = randomer.nextInt(0, HEIGHT - 1);
             Asteroid newAsteroid = new Asteroid(x, y);
             if (newAsteroid.collide(ship)) {
                 i = i - 1;
@@ -154,9 +155,10 @@ public class AsteroidsApplication extends Application {
                 });
 
                 //Adding regulary new random Asteroid from random corners of the Scene and making them progresively faster
-                if (Math.random() < 0.005) {
-                    int locationX = randomer.nextInt(2) * WIDTH;
-                    int locationY = randomer.nextInt(2) * HEIGHT;
+                if (randomer.nextUniform(0, 1) < 0.005) {
+                    // Generate locationX and locationY
+                    int locationX = randomer.nextInt(0, 1) * WIDTH;
+                    int locationY = randomer.nextInt(0, 1) * HEIGHT;
                     Asteroid asteroid = new Asteroid(locationX, locationY);
                     for (int i = 0; i < speedEnhancer; i++) {
                         asteroid.accelerate();
