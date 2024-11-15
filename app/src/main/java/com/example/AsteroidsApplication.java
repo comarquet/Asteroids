@@ -16,8 +16,8 @@ import javafx.animation.AnimationTimer;
 import javafx.stage.Stage;
 
 public class AsteroidsApplication extends Application {
-    public static int WIDTH = 300;
-    public static int HEIGHT = 200;
+    public static int WIDTH = 600;
+    public static int HEIGHT = 400;
 
     @Override
     public void start(Stage stage) throws Exception {
