@@ -21,6 +21,7 @@ java {
     }
 }
 
+// Plugin to manage the graphical display
 javafx {
     version = "21"
     modules = listOf("javafx.controls", "javafx.fxml")
@@ -28,7 +29,7 @@ javafx {
 
 application {
     mainClass = "com.example.AsteroidsApplication"
-    mainModule = "Dictionary.app.main"
+    mainModule = "Asteroids.app.main"
 }
 
 tasks.named<Test>("test") {
