@@ -3,8 +3,14 @@ package com.example;
 import javafx.geometry.Point2D;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Shape;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 
+@Getter
+@Setter
+@AllArgsConstructor
 public abstract class Character {
 
     private Polygon character;
@@ -26,11 +32,6 @@ public abstract class Character {
     //rotates object to the right by 5 degrees
     public void turnRight() {
         this.character.setRotate(this.character.getRotate() + 1);
-    }
-
-    //returns the figure representing ship to move it on a scene
-    public Polygon returnCharacter() {
-        return this.character;
     }
 
     //function describes the direction, acceleration and the movement. Movement variable is used to define direction.
@@ -60,12 +61,6 @@ public abstract class Character {
         if (this.character.getTranslateY() > AsteroidsApplication.HEIGHT) {
             this.character.setTranslateY(this.character.getTranslateY() - AsteroidsApplication.HEIGHT);
         }
-    }
-
-
-    //returns Polygon of the object.
-    public Polygon getCharacter() {
-        return this.character;
     }
 
     //function checks the colision of two Character objects

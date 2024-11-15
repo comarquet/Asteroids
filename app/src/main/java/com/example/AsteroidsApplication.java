@@ -41,7 +41,7 @@ public class AsteroidsApplication extends Application {
         //creating ship
         Ship ship = new Ship((WIDTH/2), (HEIGHT/2));
 
-        layout.getChildren().add(ship.returnCharacter());
+        layout.getChildren().add(ship.getCharacter());
 
         //creating list and adding new asteroids to it
         List<Asteroid> asteroids = new ArrayList<>();
@@ -59,7 +59,7 @@ public class AsteroidsApplication extends Application {
 
         //adding each asteroid to a layout
         asteroids.forEach((asteroid) -> {
-            layout.getChildren().add(asteroid.returnCharacter());
+            layout.getChildren().add(asteroid.getCharacter());
         });
 
         //creating list for a projectiles

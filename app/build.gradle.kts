@@ -14,12 +14,17 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.0")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     implementation("org.apache.commons:commons-math3:3.6.1")
+    implementation("com.google.guava:guava:33.3.1-jre")
     implementation("org.openjfx:javafx-controls:21:win")
     implementation("org.openjfx:javafx-controls:21:linux")
     implementation("org.openjfx:javafx-controls:21:mac")
     implementation("org.openjfx:javafx-fxml:21:win")
     implementation("org.openjfx:javafx-fxml:21:linux")
     implementation("org.openjfx:javafx-fxml:21:mac")
+    compileOnly("org.projectlombok:lombok:1.18.36")
+    annotationProcessor("org.projectlombok:lombok:1.18.36")
+    testCompileOnly ("org.projectlombok:lombok:1.18.36")
+    testAnnotationProcessor ("org.projectlombok:lombok:1.18.36")
 }
 
 javafx {
