@@ -37,13 +37,22 @@ application {
     mainClass.set("com.example.AsteroidsApplication")
 }
 
+// It is necessary to create a JAR file instead of using modules
+// structure because others old dependencies don't support modules
 tasks.named<Test>("test") {
     useJUnitPlatform()
 }
-
 tasks.jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
+/*
+ * When the main application extends Application and also contains a main method,
+ * LauncherHelper checks for the 'javafx.graphics' module, and if it is not present,
+ * s a named module, the launch is aborted. As a result, having the JavaFX libraries
+ * as JARs on the classpath is not sufficient and will cause the application launch to fail.
+ * A workaround to make it work is to add a new Main class (Launcher.java= that will be the
+ * main class of the project, and that class will be the one that calls the JavaFX Application class.
+ */
     manifest {
         attributes["Main-Class"] = "com.example.Launcher"
     }
