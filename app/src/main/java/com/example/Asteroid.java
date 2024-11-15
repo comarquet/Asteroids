@@ -1,6 +1,6 @@
 package com.example;
 
-import java.util.Random;
+import org.apache.commons.math3.random.RandomDataGenerator;
 
 public class Asteroid extends Character {
 
@@ -10,23 +10,23 @@ public class Asteroid extends Character {
     public Asteroid(int x, int y) {
         super(new PolygonFactory().createPolygon(), x, y);
 
-        //random numbers generator to add randomness
-        Random randomer = new Random();
+        // Initialize RandomDataGenerator for randomness
+        RandomDataGenerator randomDataGenerator = new RandomDataGenerator();
 
-        //Asteroid is turned into random direction
-        this.returnCharacter().setRotate(randomer.nextInt(360));
+        // Asteroid is turned into a random direction between 0 and 360 degrees
+        this.returnCharacter().setRotate(randomDataGenerator.nextUniform(0, 360));
 
-        //random  slight rotation to the movement of Asteroid
-        this.rotation = 0.5 - randomer.nextDouble();
+        // Random slight rotation to the movement of the Asteroid
+        this.rotation = randomDataGenerator.nextUniform(-0.5, 0.5);
 
-        //random speed of each asteroid is defined by random number of using "accelerate" function
-        int acceleration = randomer.nextInt(7) + 1;
+        // Random speed of each asteroid defined by acceleration steps
+        int acceleration = randomDataGenerator.nextInt(1, 7);
         for (int i = 0; i < acceleration; i++) {
             this.accelerate();
         }
     }
 
-    //each move slight rotation takes place too
+    // Each move includes a slight rotation as well
     @Override
     public void move() {
         super.move();
