@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15480bfb-0447-4bf2-94e4-d0c49262070c" name="Changes" comment="Modifies metadata">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="15480bfb-0447-4bf2-94e4-d0c49262070c" name="Changes" comment="Fixes java environment + add modules">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/AsteroidsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/AsteroidsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Projectile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +130,7 @@
       <workItem from="1731606898211" duration="2116000" />
       <workItem from="1731610194126" duration="1535000" />
       <workItem from="1731611751346" duration="10296000" />
-      <workItem from="1731655031363" duration="8258000" />
+      <workItem from="1731655031363" duration="12418000" />
     </task>
     <task id="LOCAL-00001" summary="Fixes some problems">
       <option name="closed" value="true" />
@@ -157,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731620748155</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixes java environment + add modules">
+      <option name="closed" value="true" />
+      <created>1731665514634</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731665514634</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +185,7 @@
     <MESSAGE value="Fixes some problems" />
     <MESSAGE value="It works" />
     <MESSAGE value="Modifies metadata" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifies metadata" />
+    <MESSAGE value="Fixes java environment + add modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes java environment + add modules" />
   </component>
 </project>
