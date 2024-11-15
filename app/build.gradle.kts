@@ -48,9 +48,9 @@ tasks.jar {
 /*
  * When the main application extends Application and also contains a main method,
  * LauncherHelper checks for the 'javafx.graphics' module, and if it is not present,
- * s a named module, the launch is aborted. As a result, having the JavaFX libraries
+ * as a named module, the launch is aborted. As a result, having the JavaFX libraries
  * as JARs on the classpath is not sufficient and will cause the application launch to fail.
- * A workaround to make it work is to add a new Main class (Launcher.java= that will be the
+ * A workaround to make it work is to add a new Main class (Launcher.java) that will be the
  * main class of the project, and that class will be the one that calls the JavaFX Application class.
  */
     manifest {
