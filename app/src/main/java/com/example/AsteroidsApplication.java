@@ -16,8 +16,8 @@ import javafx.animation.AnimationTimer;
 import javafx.stage.Stage;
 
 public class AsteroidsApplication extends Application {
-    public static int WIDTH = 300;
-    public static int HEIGHT = 200;
+    public static int WIDTH = 600;
+    public static int HEIGHT = 400;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -33,31 +33,12 @@ public class AsteroidsApplication extends Application {
         List<Projectile> projectiles = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             Random rnd = new Random();
-            Asteroid asteroid = new Asteroid(rnd.nextInt(WIDTH / 3), rnd.nextInt(HEIGHT));
+            Asteroid asteroid = new Asteroid(rnd.nextInt(WIDTH), rnd.nextInt(HEIGHT));
             asteroids.add(asteroid);
         }
 
         pane.getChildren().add(ship.getCharacter());
         asteroids.forEach(asteroid -> pane.getChildren().add(asteroid.getCharacter()));
-        projectiles.forEach(projectile -> {
-            asteroids.forEach(asteroid -> {
-                if(projectile.collide(asteroid)) {
-                    projectile.setAlive(false);
-                    asteroid.setAlive(false);
-                }
-            });
-
-            if(!projectile.isAlive()) {
-                text.setText("Points: " + points.addAndGet(1000));
-            }
-        });
-
-        projectiles.stream()
-                .filter(projectile -> !projectile.isAlive())
-                .forEach(projectile -> pane.getChildren().remove(projectile.getCharacter()));
-        projectiles.removeAll(projectiles.stream()
-                .filter(projectile -> !projectile.isAlive())
-                .collect(Collectors.toList()));
 
         asteroids.stream()
                 .filter(asteroid -> !asteroid.isAlive())
@@ -78,6 +59,8 @@ public class AsteroidsApplication extends Application {
             pressedKeys.put(event.getCode(), Boolean.FALSE);
         });
 
+
+
         new AnimationTimer() {
 
             @Override
@@ -94,14 +77,14 @@ public class AsteroidsApplication extends Application {
                     ship.accelerate();
                 }
 
-                if (pressedKeys.getOrDefault(KeyCode.SPACE, false) && projectiles.size() < 5) {
+                if (pressedKeys.getOrDefault(KeyCode.SPACE, false)) {
                     // we shoot
                     Projectile projectile = new Projectile((int) ship.getCharacter().getTranslateX(), (int) ship.getCharacter().getTranslateY());
                     projectile.getCharacter().setRotate(ship.getCharacter().getRotate());
                     projectiles.add(projectile);
 
                     projectile.accelerate();
-                    projectile.setMovement(projectile.getMovement().normalize().multiply(5));
+                    projectile.setMovement(projectile.getMovement().normalize().multiply(3));
 
                     pane.getChildren().add(projectile.getCharacter());
                 }
