@@ -5,10 +5,10 @@ Welcome to **Asteroids**! This project is powered by Gradle, making it easy to b
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-  - [Building the Project](#building-the-project)
-  - [Running the Project](#running-the-project)
-  - [Detailed Build Information](#detailed-build-information)
-- [Contributing](#contributing)
+- [Building the Project](#building-the-project)
+- [Running the Project](#running-the-project)
+- [Testing the Project](#testing-the-project)
+- [Detailed Build Information](#detailed-build-information)
 
 ## Getting Started
 
@@ -25,51 +25,41 @@ All commands provided below will use the Gradle Wrapper (`./gradlew` for Linux/m
 
 To compile and build the project, run:
 
-- **Linux/macOS**:
-
-  ```sh
-  ./gradlew build
-  ```
-
-- **Windows**:
-
-  ```sh
-  gradlew.bat build
-  ```
+```sh
+./gradlew build
+```
 
 This command will compile all source code, run static analysis, and create the required JAR files in the `build` directory.
-
-If you want to see more detailed information about what Gradle tasks are being executed, use the `--info` flag with the `build` command:
-
-- **Linux/macOS**:
-
-  ```sh
-  ./gradlew build --info
-  ```
-
-- **Windows**:
-
-  ```sh
-  gradlew.bat build --info
-  ```
-
-This flag provides detailed logs about the build process.
 
 ### Running the Project
 
 To run the project, execute the following command:
 
-- **Linux/macOS**:
-
-  ```sh
-  ./gradlew run
-  ```
-
-- **Windows**:
-
-  ```sh
-  gradlew.bat run
-  ```
+```sh
+./gradlew run
+```
 
 This will start the application, which typically runs a main method defined in your project's main class.
 
+### Testing the Project
+
+To run all tests in the project, use:
+
+```sh
+./gradlew test
+```
+
+This command will:
+- Compile the test source files.
+- Run all tests located in `src/test/java` (or equivalent test directories).
+- Generate a test report in `build/reports/tests/test/index.html`.
+
+### Detailed Build Information
+
+If you want to see more detailed information about what Gradle tasks are being executed, use the `--info` flag with the `build` command:
+
+```sh
+./gradlew build --info
+```
+
+This flag provides detailed logs about the build process.
