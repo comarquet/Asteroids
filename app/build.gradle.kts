@@ -38,10 +38,6 @@ java {
     }
 }
 
-test {
-    useJUnitPlatform()
-}
-
 application {
     mainClass.set("com.example.AsteroidsApplication")
 }
