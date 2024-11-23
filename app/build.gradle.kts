@@ -4,6 +4,7 @@ version = "1.0.0"
 plugins {
     application
     id("org.openjfx.javafxplugin") version "0.1.0"
+    checkstyle
 }
 
 repositories {
