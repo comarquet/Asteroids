@@ -11,7 +11,6 @@ import org.apache.commons.math3.random.RandomDataGenerator;
 @Setter
 public class Asteroid extends Character {
 
-  @SuppressWarnings("checkstyle:JavadocVariable")
   private double rotation;
 
   public Asteroid(int x, int y) {
