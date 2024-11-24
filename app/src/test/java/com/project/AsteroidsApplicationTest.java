@@ -68,4 +68,21 @@ class AsteroidsApplicationTest {
     double afterRightRotation = shipNode.getRotate();
     Assertions.assertThat(afterRightRotation).isGreaterThan(initialRotation);
   }
+
+  @Test
+  void should_move_forward(FxRobot robot) {
+    // Initial position of the ship
+    double initialTranslateX = shipNode.getTranslateX();
+
+    // Accelerate ship forward
+    robot.press(KeyCode.UP);
+    robot.sleep(500);  // Increase sleep to allow more movement
+    robot.release(KeyCode.UP);
+
+    // Check if the ship's position has changed beyond a small threshold
+    double afterTranslateX = shipNode.getTranslateX();
+    double threshold = 0.1;  // A small value to account for movement
+
+    Assertions.assertThat(Math.abs(afterTranslateX - initialTranslateX)).isGreaterThan(threshold);
+  }
 }
