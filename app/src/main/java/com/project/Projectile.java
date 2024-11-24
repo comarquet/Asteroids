@@ -1,4 +1,4 @@
-package com.example;
+package com.project;
 
 import javafx.scene.shape.Polygon;
 import lombok.Getter;

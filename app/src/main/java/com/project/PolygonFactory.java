@@ -1,4 +1,4 @@
-package com.example;
+package com.project;
 
 import org.apache.commons.math3.random.RandomDataGenerator;
 import javafx.scene.shape.Polygon;

@@ -1,6 +1,5 @@
-package com.example;
+package com.project;
 
-import javafx.geometry.Point2D;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Shape;
 import lombok.AllArgsConstructor;

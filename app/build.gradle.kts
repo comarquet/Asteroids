@@ -21,6 +21,10 @@ dependencies {
     implementation("org.openjfx:javafx-fxml:21:win")
     implementation("org.openjfx:javafx-fxml:21:linux")
     implementation("org.openjfx:javafx-fxml:21:mac")
+    testImplementation("org.testfx:testfx-core:4.0.18")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.11.3")
+    testImplementation("org.testfx:testfx-junit5:4.0.18")
+    testImplementation("org.assertj:assertj-core:3.26.3")
     compileOnly("org.projectlombok:lombok:1.18.36")
     annotationProcessor("org.projectlombok:lombok:1.18.36")
     testCompileOnly ("org.projectlombok:lombok:1.18.36")
@@ -43,7 +47,7 @@ java {
 }
 
 application {
-    mainClass.set("com.example.AsteroidsApplication")
+    mainClass.set("com.project.AsteroidsApplication")
 }
 
 // It is necessary to create a JAR file instead of using modules structure
@@ -63,7 +67,7 @@ tasks.jar {
  * main class of the project, and that class will be the one that calls the JavaFX Application class.
  */
     manifest {
-        attributes["Main-Class"] = "com.example.Launcher"
+        attributes["Main-Class"] = "com.project.Launcher"
     }
     from({
         configurations.runtimeClasspath.get().flatMap {

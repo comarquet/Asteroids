@@ -1,0 +1,153 @@
+2024-11-24 17:54:18 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Application started
+2024-11-24 17:54:18 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Game window displayed
+2024-11-24 17:54:22 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:22 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:23 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:23 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:23 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:23 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:24 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:24 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:24 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:24 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:25 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 17:54:25 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:26 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:26 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 17:54:26 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:26 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:27 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:27 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:27 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:27 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:28 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:28 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:28 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 17:54:28 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 17:54:28 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 17:54:29 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 17:54:30 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 17:54:31 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 17:54:32 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 17:54:33 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:40:52 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Application started
+2024-11-24 18:40:53 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Game window displayed
+2024-11-24 18:40:55 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:55 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:55 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:55 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:55 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:55 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:55 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:55 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:55 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:55 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:56 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:56 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:56 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:56 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:56 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:56 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:40:57 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:40:57 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:57 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:40:57 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:57 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:57 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:57 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:40:57 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:57 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:57 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:58 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:58 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:40:58 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:58 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:40:58 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:58 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:59 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:59 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:59 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:40:59 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:59 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:59 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:40:59 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:00 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:00 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:00 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:00 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:00 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:00 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:00 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:00 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:00 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:00 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:00 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:01 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:01 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:01 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:01 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:01 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:01 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:01 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:01 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:01 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:01 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:01 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:02 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:02 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:02 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:02 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:41:02 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:02 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:02 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:02 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:03 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:03 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:05 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:05 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:05 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:06 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:07 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:07 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:08 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:08 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:08 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:09 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:09 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:10 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:10 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:10 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:10 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:11 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:11 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:11 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:11 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:12 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:12 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:12 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:13 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:13 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:13 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:14 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:15 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:15 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:41:17 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:47:14 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Application started
+2024-11-24 18:47:14 [JavaFX Application Thread] WARN  com.example.AsteroidsApplication - Collision detected between new asteroid and ship at initialization. Retrying asteroid placement.
+2024-11-24 18:47:14 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Game window displayed
+2024-11-24 18:47:16 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:47:16 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:47:16 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:47:17 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:47:17 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:47:17 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:47:17 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:47:17 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:47:17 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:47:17 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:47:17 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:47:17 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:47:17 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Projectile fired
+2024-11-24 18:47:18 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:47:19 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
+2024-11-24 18:47:19 [JavaFX Application Thread] INFO  com.example.AsteroidsApplication - Asteroid destroyed. Points awarded: 1000
