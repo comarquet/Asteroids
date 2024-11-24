@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xmlns="https://logging.apache.org/xml/ns"
-               xsi:schemaLocation="
-                       https://logging.apache.org/xml/ns
-                       https://logging.apache.org/xml/ns/log4j-config-2.xsd">
-
+<Configuration status="WARN">
     <Appenders>
-        <Console name="CONSOLE">
-            <JsonTemplateLayout/>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
+        <File name="File" fileName="logs/asteroids.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
     </Appenders>
-
     <Loggers>
-        <Logger name="com.example" level="INFO"/>
-        <Root level="WARN">
-            <AppenderRef ref="CONSOLE"/>
+        <Root level="fatal">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
         </Root>
     </Loggers>
-
 </Configuration>

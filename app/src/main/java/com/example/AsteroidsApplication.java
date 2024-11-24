@@ -15,8 +15,12 @@ import javafx.scene.input.KeyCode;
 import javafx.animation.AnimationTimer;
 import javafx.stage.Stage;
 import org.apache.commons.math3.random.RandomDataGenerator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class AsteroidsApplication extends Application {
+
+    private static final Logger logger = LogManager.getLogger(AsteroidsApplication.class);
 
     public static int WIDTH = 600;
     public static int HEIGHT = 400;
@@ -24,26 +28,29 @@ public class AsteroidsApplication extends Application {
     @Override
     public void start(Stage window) {
 
-        //Creating a new layout for the game
+        logger.info("Application started");
+
+        // Creating a new layout for the game
         Pane layout = new Pane();
         layout.setPrefSize(WIDTH, HEIGHT);
 
-        //Creating AtomicInteger object to count points
+        // Creating AtomicInteger object to count points
         AtomicInteger points = new AtomicInteger();
 
-        //Text object to depict points
+        // Text object to depict points
         Text score = new Text(10, 20, "Points: 0");
         layout.getChildren().add(score);
 
-        //creating the object that gives random values
+        // Creating the object that gives random values
         RandomDataGenerator randomer = new RandomDataGenerator();
 
-        //creating ship
-        Ship ship = new Ship((WIDTH/2), (HEIGHT/2));
-
+        // Creating ship
+        Ship ship = new Ship((WIDTH / 2), (HEIGHT / 2));
         layout.getChildren().add(ship.getCharacter());
 
-        //creating list and adding new asteroids to it
+        logger.debug("Ship created at position: ({}, {})", WIDTH / 2, HEIGHT / 2);
+
+        // Creating list and adding new asteroids to it
         List<Asteroid> asteroids = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
@@ -52,61 +59,58 @@ public class AsteroidsApplication extends Application {
             Asteroid newAsteroid = new Asteroid(x, y);
             if (newAsteroid.collide(ship)) {
                 i = i - 1;
+                logger.warn("Collision detected between new asteroid and ship at initialization. Retrying asteroid placement.");
             } else {
                 asteroids.add(newAsteroid);
+                logger.debug("Asteroid created at position: ({}, {})", x, y);
             }
         }
 
-        //adding each asteroid to a layout
-        asteroids.forEach((asteroid) -> {
-            layout.getChildren().add(asteroid.getCharacter());
-        });
+        // Adding each asteroid to a layout
+        asteroids.forEach((asteroid) -> layout.getChildren().add(asteroid.getCharacter()));
 
-        //creating list for a projectiles
+        // Creating list for projectiles
         List<Projectile> projectiles = new ArrayList<>();
 
-        //Creating new scene
+        // Creating new scene
         Scene scene = new Scene(layout);
 
-        //ADDING ROTATION TO A SHIP
-
-        //creating a HashMap that will containt the info about the state of the buttons: whether they are currently pressed or not
+        // Creating a HashMap that contains info about the state of the buttons
         Map<KeyCode, Boolean> pressedKeys = new HashMap<>();
 
-        //changing the status of the button with the press and release action
+        // Changing the status of the button with press and release actions
         scene.setOnKeyPressed((event) -> {
             pressedKeys.put(event.getCode(), Boolean.TRUE);
+            if (!pressedKeys.containsKey(event.getCode())) {
+                logger.warn("Unhandled key pressed: " + event.getCode());
+            }
         });
+        scene.setOnKeyReleased((event) -> pressedKeys.put(event.getCode(), Boolean.FALSE));
 
-        scene.setOnKeyReleased((event) -> {
-            pressedKeys.put(event.getCode(), Boolean.FALSE);
-        });
-
-        //new Animation functionality to move objects
+        // New Animation functionality to move objects
         new AnimationTimer() {
 
-            //variable to be used to give bullets a pace. Unless the difference between last
-            //bullet and new one is more than 30, no bullet will be shot.
             int bulletTimer = 30;
-
-            //Variable to be used to enhance speed of new random Asteroids
             int speedEnhancer = 1;
 
             @Override
             public void handle(long now) {
                 bulletTimer++;
 
-                //animating ship's rotation according to the state of the buttons(pressed or not).
-                if (pressedKeys.getOrDefault(KeyCode.LEFT, false)) {
-                    ship.turnLeft();
+                // Animating ship's rotation according to button state
+                try {
+                    if (pressedKeys.getOrDefault(KeyCode.LEFT, false)) {
+                        ship.turnLeft();
+                    }
+                    if (pressedKeys.getOrDefault(KeyCode.RIGHT, false)) {
+                        ship.turnRight();
+                    }
+                    if (pressedKeys.getOrDefault(KeyCode.UP, false)) {
+                        ship.accelerate();
+                    }
+                } catch (Exception e) {
+                    logger.error("Error during ship movement: ", e);
                 }
-                if (pressedKeys.getOrDefault(KeyCode.RIGHT, false)) {
-                    ship.turnRight();
-                }
-                if (pressedKeys.getOrDefault(KeyCode.UP, false)) {
-                    ship.accelerate();
-                }
-                //shooting a projectile. Max 2 per second
                 if (pressedKeys.getOrDefault(KeyCode.SPACE, false)) {
                     if (bulletTimer > 30) {
                         Projectile bullet = new Projectile(ship);
@@ -114,14 +118,14 @@ public class AsteroidsApplication extends Application {
                         bullet.getCharacter().setRotate(ship.getCharacter().getRotate());
                         projectiles.add(bullet);
                         layout.getChildren().add(bullet.getCharacter());
+                        logger.info("Projectile fired");
                     }
                 }
 
-                //movement and speed reduction of the ship
+                // Movement and collision detection
                 ship.reduceSpeed();
                 ship.move();
 
-                //movement of all the asteroids. Collision with the ship stops the game
                 asteroids.forEach(asteroid -> {
                     asteroid.move();
                     if (ship.collide(asteroid)) {
@@ -129,34 +133,22 @@ public class AsteroidsApplication extends Application {
                     }
                 });
 
-                //movement of projectiles
-                projectiles.forEach((projectile) ->{
+                projectiles.forEach(projectile -> {
                     projectile.move();
-                });
-
-                //projectiles hitting the asteroid changing status. Both disappear. Points are given
-                projectiles.forEach((projectile) -> {
-                    asteroids.forEach((asteroid) -> {
+                    asteroids.forEach(asteroid -> {
                         if (asteroid.collide(projectile)) {
                             layout.getChildren().remove(asteroid.getCharacter());
                             asteroids.remove(asteroid);
                             layout.getChildren().remove(projectile.getCharacter());
                             projectiles.remove(projectile);
                             score.setText("Points: " + points.addAndGet(1000));
+                            logger.info("Asteroid destroyed. Points awarded: 1000");
                         }
                     });
-
-                    //removing projectile after about 3 seconds without reaching target
-                    projectile.addToLifeSpan();
-                    if (projectile.getLifeSpan() > 500) {
-                        layout.getChildren().remove(projectile.getCharacter());
-                        projectiles.remove(projectile);
-                    }
                 });
 
-                //Adding regulary new random Asteroid from random corners of the Scene and making them progresively faster
+                // Adding new random asteroid occasionally
                 if (randomer.nextUniform(0, 1) < 0.005) {
-                    // Generate locationX and locationY
                     int locationX = randomer.nextInt(0, 1) * WIDTH;
                     int locationY = randomer.nextInt(0, 1) * HEIGHT;
                     Asteroid asteroid = new Asteroid(locationX, locationY);
@@ -166,25 +158,25 @@ public class AsteroidsApplication extends Application {
                     asteroids.add(asteroid);
                     layout.getChildren().add(asteroid.getCharacter());
                     speedEnhancer++;
+                    logger.debug("New asteroid added at ({}, {}) with enhanced speed", locationX, locationY);
                 }
-
             }
         }.start();
 
-        //adding scene to a window
+        // Adding scene to window
         window.setTitle("Asteroids!");
         window.setScene(scene);
         window.show();
 
+        logger.info("Game window displayed");
     }
 
     public static void main(String[] args) {
-        launch(args);
+        try {
+            launch(args);
+        } catch (Exception e) {
+            logger.fatal("Fatal error occurred during application launch: ", e);
+            throw e;
+        }
     }
-
-    public static int partsCompleted() {
-        // State how many parts you have completed using the return value of this method
-        return 4;
-    }
-
 }
