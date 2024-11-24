@@ -26,6 +26,9 @@ dependencies {
     testCompileOnly ("org.projectlombok:lombok:1.18.36")
     testAnnotationProcessor ("org.projectlombok:lombok:1.18.36")
     implementation("org.apache.logging.log4j:log4j-bom:2.24.2")
+    implementation("org.apache.logging.log4j:log4j-api:2.24.2")
+    runtimeOnly("org.apache.logging.log4j:log4j-core:2.24.2")
+    runtimeOnly("org.apache.logging.log4j:log4j-layout-template-json:2.24.2")
 }
 
 javafx {
