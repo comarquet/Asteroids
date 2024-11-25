@@ -7,6 +7,7 @@ import org.testfx.assertions.api.Assertions;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
 
+import javafx.application.Platform;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import javafx.scene.layout.Pane;
@@ -18,6 +19,7 @@ class AsteroidsApplicationTest {
 
   private Pane layout;
   private Node shipNode;
+  private Polygon asteroid;
 
   @Start
   private void start(Stage stage) {
@@ -84,5 +86,26 @@ class AsteroidsApplicationTest {
     double threshold = 0.1;  // A small value to account for movement
 
     Assertions.assertThat(Math.abs(afterTranslateX - initialTranslateX)).isGreaterThan(threshold);
+  }
+
+  @Test
+  void should_fire_projectile(FxRobot robot) {
+    // Count the number of nodes before firing
+    long initialProjectileCount = layout.getChildren().stream()
+      .filter(node -> node instanceof Polygon && ((Polygon) node).getPoints().equals(java.util.List.of(-2.0, -2.0, -2.0, 2.0, 2.0, 2.0, 2.0, -2.0)))
+      .count();
+
+    // Fire a projectile by pressing space
+    robot.press(KeyCode.SPACE);
+    robot.sleep(500);
+    robot.release(KeyCode.SPACE);
+
+    // Count the number of nodes after firing
+    long afterProjectileCount = layout.getChildren().stream()
+      .filter(node -> node instanceof Polygon && ((Polygon) node).getPoints().equals(java.util.List.of(-2.0, -2.0, -2.0, 2.0, 2.0, 2.0, 2.0, -2.0)))
+      .count();
+
+    // Verify that a new projectile has been added
+    Assertions.assertThat(afterProjectileCount).isGreaterThan(initialProjectileCount);
   }
 }
