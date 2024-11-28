@@ -18,13 +18,28 @@ import org.apache.commons.math3.random.RandomDataGenerator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * Main application class for the Asteroids game.
+ * Handles the game logic, initialization, and rendering.
+ */
 public class AsteroidsApplication extends Application {
 
     private static final Logger logger = LogManager.getLogger(AsteroidsApplication.class);
-
+    
+    /**
+     * Width of the game window.
+     */
     public static int WIDTH = 600;
+    /**
+     * Height of the game window.
+     */
     public static int HEIGHT = 400;
-
+    
+    /**
+     * Starts the JavaFX application and initializes the game.
+     *
+     * @param window The primary stage for the application.
+     */
     @Override
     public void start(Stage window) {
 
@@ -170,7 +185,12 @@ public class AsteroidsApplication extends Application {
 
         logger.info("Game window displayed");
     }
-
+    
+    /**
+     * Entry point for the application.
+     *
+     * @param args Command-line arguments.
+     */
     public static void main(String[] args) {
         try {
             launch(args);
