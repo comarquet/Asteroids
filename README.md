@@ -1,65 +1,32 @@
 # Asteroids
 
-Welcome to **Asteroids**! This project is powered by Gradle, making it easy to build, test, and run. Below, you'll find detailed instructions to help you get started quickly, whether you're using Linux, macOS, or Windows.
+Welcome to the best game of the year : **Asteroids** !
 
-## Table of Contents
+## Prerequisites
 
-- [Getting Started](#getting-started)
-- [Building the Project](#building-the-project)
-- [Running the Project](#running-the-project)
-- [Testing the Project](#testing-the-project)
-- [Detailed Build Information](#detailed-build-information)
+JDK 11 or higher
 
-## Getting Started
-
-Before anything else, clone the Git repository to your local machine and navigate to the project directory:
+## Installation and usage
 
 ```sh
 git clone https://github.com/comarquet/Asteroids.git
 cd Asteroids
-```
-
-All commands provided below will use the Gradle Wrapper (`./gradlew` for Linux/macOS and `gradlew.bat` for Windows). This ensures that the correct version of Gradle is used.
-
-### Building the Project
-
-To compile and build the project, run:
-
-```sh
-./gradlew build
-```
-
-This command will compile all source code, run static analysis, and create the required JAR files in the `build` directory.
-
-### Running the Project
-
-To run the project, execute the following command:
-
-```sh
 ./gradlew run
 ```
+For Windows, replace `./gradlew` by `gradlew.bat`
 
-This will start the application, which typically runs a main method defined in your project's main class.
+[Tutorial](tutorial.md)
 
-### Testing the Project
+## Support
 
-To run all tests in the project, use:
+If you have any questions or need assistance, feel free to reach out at cormarquet@gmail.com. I'll be happy to help!
 
-```sh
-./gradlew test
-```
+## Contributing
 
-This command will:
-- Compile the test source files.
-- Run all tests located in `src/test/java` (or equivalent test directories).
-- Generate a test report in `build/reports/tests/test/index.html`.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-### Detailed Build Information
+Please make sure to update tests as appropriate.
 
-If you want to see more detailed information about what Gradle tasks are being executed, use the `--info` flag with the `build` command:
+## License
 
-```sh
-./gradlew build --info
-```
-
-This flag provides detailed logs about the build process.
+[MIT](LICENSE.md)
